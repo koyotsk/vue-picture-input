@@ -296,7 +296,7 @@ export default {
         if (prefill) {
           this.$emit('prefill')
         } else {
-          this.$emit('change', this.image)
+          this.$emit('change', this.image, this.id)
         }
       }
     },
@@ -314,7 +314,7 @@ export default {
           if (prefill) {
             this.$emit('prefill')
           } else {
-            this.$emit('change', this.image)
+            this.$emit('change', this.image, this.id)
           }
           this.imageObject = new Image()
           this.imageObject.onload = () => {
